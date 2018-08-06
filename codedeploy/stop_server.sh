@@ -3,7 +3,7 @@
 ENVIRONMENT=`echo $DEPLOYMENT_GROUP_NAME`
 echo "ENVIRONMENT = $ENVIRONMENT"
 
-# if [[ $DEPLOYMENT_GROUP_NAME == "DistanceService" ]]
+# if [[ $DEPLOYMENT_GROUP_NAME == "osrm" ]]
 # then
 #   STATUS_CODE=$(curl -s -o /dev/null -w '%{http_code}' -X POST http://localhost:80/healthcheck/negate)  # removing from the ELB.
 # else

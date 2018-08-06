@@ -6,9 +6,9 @@
 ENVIRONMENT=`echo $DEPLOYMENT_GROUP_NAME`
 
 echo "ENVIRONMENT = $ENVIRONMENT"
-if [[ $DEPLOYMENT_GROUP_NAME == "DistanceService" ]]
+if [[ $DEPLOYMENT_GROUP_NAME == "osrm" ]]
 then
-    echo "Will run Docker container for DistanceService."
+    echo "Will run Docker container for osrm."
 
     #:v5.18.0
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 PORT=80
 
-if [ "$DEPLOYMENT_GROUP_NAME" == "DistanceService" ]
+if [ "$DEPLOYMENT_GROUP_NAME" == "osrm" ]
 then
   PORT=5200
 else
