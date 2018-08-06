@@ -29,7 +29,7 @@ then
 
 
     #docker rm temp1, temp2, temp3
-    sudo docker run --name osrm-app -t -d -p 5200:5200 -v /home/ubuntu/osrm:/data osrm/osrm-backend osrm-routed --algorithm mld /data/bengaluru_now.osrm
+    sudo docker run --name osrm-app -t -d -p 5200:5000 -v /home/ubuntu/osrm:/data osrm/osrm-backend osrm-routed --algorithm mld /data/bengaluru_now.osrm
 
 elif [[ $DEPLOYMENT_GROUP_NAME == "stage" ]]
 then

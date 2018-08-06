@@ -17,7 +17,7 @@ echo "ENVIRONMENT = $ENVIRONMENT"
 #     sleep 60
 
 # Stopping service
-# sudo docker stop osrm || true
+# sudo docker stop osrm-app || true
 # else
 #     echo "Got $STATUS_CODE while trying to negate the healthcheck. Can't remove from the ELB, hence aborting the deployment."
 #     exit 1  # exiting with the non success code, so code deploy stops the deployment.
