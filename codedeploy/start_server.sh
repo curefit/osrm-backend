@@ -12,11 +12,11 @@ then
 
     #:v5.18.0
 
-    sudo docker run --name osrm-extract-temp -t -v /home/ubuntu/osrm:/data osrm/osrm-backend osrm-extract -p /opt/car.lua /data/bengaluru_now.osm.pbf
+    sudo docker run --name osrm-extract-temp -t -v /home/ubuntu/osrm:/data osrm/osrm-backend osrm-extract -p /opt/car.lua /data/osrm_location.osm.pbf
 
-    sudo docker run --name osrm-partition-temp -t -v /home/ubuntu/osrm:/data osrm/osrm-backend osrm-partition /data/bengaluru_now.osrm
+    sudo docker run --name osrm-partition-temp -t -v /home/ubuntu/osrm:/data osrm/osrm-backend osrm-partition /data/osrm_location.osrm
 
-    sudo docker run --name osrm-customize-temp -t -v /home/ubuntu/osrm:/data osrm/osrm-backend osrm-customize /data/bengaluru_now.osrm
+    sudo docker run --name osrm-customize-temp -t -v /home/ubuntu/osrm:/data osrm/osrm-backend osrm-customize /data/osrm_location.osrm
 
 
     sudo docker stop osrm-extract-temp || true
@@ -29,7 +29,7 @@ then
 
 
     #docker rm temp1, temp2, temp3
-    sudo docker run --name osrm-app -t -d -p 5200:5000 -v /home/ubuntu/osrm:/data osrm/osrm-backend osrm-routed --algorithm mld /data/bengaluru_now.osrm
+    sudo docker run --name osrm-app -t -d -p 5200:5000 -v /home/ubuntu/osrm:/data osrm/osrm-backend osrm-routed --algorithm mld /data/osrm_location.osrm
 
 elif [[ $DEPLOYMENT_GROUP_NAME == "stage" ]]
 then
